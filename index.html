@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="library.js" defer></script>
+</head>
+<body>
+    <div class="title">Library</div>
+    <div class="main">
+        <div class="newBook">
+            <button>Add a book</button>
+        </div>
+    </div>
+
+    <div class="inputModal">
+        <div class="modalTitle">Add a new book</div>
+        <form id="newBook" action="">
+            <ul>
+                <li>
+                    <label for="newBookTitle">Title</label>
+                    <input type="text" name="title" id="newBookTitle">
+                </li>
+                <li>
+                    <label for="newBookAuthor">Author</label>
+                    <input type="text" name="author" id="newBookAuthor">
+                </li>
+                <li>
+                    <label for="newBookPages">Pages</label>
+                    <input type="tel" name="pages" id="newBookPages">
+                </li>
+                <li>
+                    <label for="newBookRead">Read</label>
+                    <input type="checkbox" name="read" id="newBookRead">
+                </li>
+            </ul>
+            <button class="newBookBtn" type="submit">Add Book</button>
+        </form>
+        <!--<div class="btnBook">
+            <button form="newBook" class="newBookBtn" type="submit">Add Book</button>
+        </div>-->
+    </div>
+</body>
+</html>
