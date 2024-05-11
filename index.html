@@ -7,14 +7,22 @@
     <script src="library.js" defer></script>
 </head>
 <body>
-    <div class="title">Library</div>
-    <div class="main">
-        <div class="newBook">
-            <button>Add a book</button>
+    <div class="controlRow">
+        <div class="title">Library</div>
+        <div class="main">
+            <div class="createBook">
+                <button id="createBook">Add a book</button>
+            </div><!--
+            <div class="listBooks">
+                <button id="listBtn">List books present</button>
+            </div>-->
         </div>
     </div>
 
-    <div class="inputModal">
+    <div class="booksRow"></div>
+
+    <div class="inputModal" id="inputModal">
+        <div class="modalContent">
         <div class="modalTitle">Add a new book</div>
         <form id="newBook" action="">
             <ul>
@@ -37,6 +45,7 @@
             </ul>
             <button class="newBookBtn" type="submit">Add Book</button>
         </form>
+        </div>
         <!--<div class="btnBook">
             <button form="newBook" class="newBookBtn" type="submit">Add Book</button>
         </div>-->

@@ -13,11 +13,17 @@ Book.prototype.addBook = function(){
     myLibrary.push(this);
 
     console.log("Book added");
-}
+} /*modal -> form? -> onClick?
+https://www.freecodecamp.org/news/how-to-submit-a-form-with-javascript/
+
+https://www.freecodecamp.org/news/how-to-build-a-modal-with-javascript/
+*/
 
 Book.prototype.removeBook = function(){}
 
-Book.prototype.displayBooks = function(){}
+Book.prototype.displayBook = function(){
+    console.log("test display, book "+this.position);
+}
 
 const newBook=document.getElementById("newBook");
 /*newBook.addEventListener("submit", (e)=>{
@@ -37,3 +43,23 @@ function createBook(e){
     let createBook=new Book(newBookTitle, newBookAuthor, newBookPages, newBookRead);
     createBook.addBook();
 }
+
+const inputModal=document.getElementById("inputModal");
+//When clicked, this button makes an overlay with the modal appear
+const addNewBook=document.getElementById("createBook");
+addNewBook.addEventListener("click", ()=>{
+    inputModal.style.display="block";
+});
+
+//To exit the modal, just click anywhere outside of its elements
+window.onclick=(e)=>{
+    if(e.target==inputModal) inputModal.style.display="none";
+}
+
+//listBtn function
+/*const listBooksBtn=document.getElementById("listBtn");
+listBooksBtn.addEventListener("click", listBooks);
+
+function listBooks(e){
+    for(let i=0; i<myLibrary.length; i++) myLibrary[i].displayBook();
+}*/
