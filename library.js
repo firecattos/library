@@ -1,7 +1,7 @@
 const myLibrary=[];
 
 
-function Book(title, author, pages, read){
+function Book(title, author, pages, read){ //add genre maybe
     this.title = title;
     this.author = author;    
     this.pages = pages;
@@ -42,7 +42,54 @@ function createBook(e){
     console.log("book: "+newBookTitle+", "+newBookAuthor+", "+newBookPages+", "+newBookRead);
     let createBook=new Book(newBookTitle, newBookAuthor, newBookPages, newBookRead);
     createBook.addBook();
+
+    bookDisplay(myLibrary);
+
+    inputModal.style.display="none";
 }
+
+//Test books
+let book1=new Book("book1", "testing", "111", true);
+book1.addBook();
+let book2=new Book("book2", "testing", "222");
+book2.addBook();
+let book3=new Book("book3", "testing", "333", true);
+book3.addBook();
+
+//make sure books are there for testing
+myLibrary.forEach((book)=>{
+    console.log("book: "+book.title+", "+book.author+", "+book.pages+", "+book.read);
+})
+
+function bookDisplay(myLibrary){
+    const bookshelf=document.getElementById("bookshelf");
+    
+    bookshelf.innerHTML="";
+
+    //while(bookshelf.firstChild) bookshelf.removeChild(firstChild);
+
+    myLibrary.forEach((book)=>{
+        const bookCard=document.createElement("div");
+        bookCard.className="book";
+
+        const title=document.createElement("h3");
+        title.textContent=book.title;
+        bookCard.appendChild(title);
+        const author=document.createElement("p");
+        author.textContent=book.author;
+        bookCard.appendChild(author);
+        const pages=document.createElement("p");
+        pages.textContent=book.pages;
+        bookCard.appendChild(pages);
+        const read=document.createElement("p");
+        read.textContent=book.read ? "Read" : "Not read";
+        bookCard.appendChild(read);
+        //after everything:
+        bookshelf.appendChild(bookCard);
+    })
+}
+
+bookDisplay(myLibrary); //Display test books
 
 const inputModal=document.getElementById("inputModal");
 //When clicked, this button makes an overlay with the modal appear

@@ -19,20 +19,23 @@
         </div>
     </div>
 
-    <div class="booksRow"></div>
+    <div class="booksRow">
+        <h3>Available books</h3>
+        <div id="bookshelf"></div>
+    </div>
 
     <div class="inputModal" id="inputModal">
         <div class="modalContent">
-        <div class="modalTitle">Add a new book</div>
+        <h4 class="modalTitle">Add a new book</h4>
         <form id="newBook" action="">
             <ul>
                 <li>
                     <label for="newBookTitle">Title</label>
-                    <input type="text" name="title" id="newBookTitle">
+                    <input type="text" name="title" id="newBookTitle" required>
                 </li>
                 <li>
                     <label for="newBookAuthor">Author</label>
-                    <input type="text" name="author" id="newBookAuthor">
+                    <input type="text" name="author" id="newBookAuthor" required>
                 </li>
                 <li>
                     <label for="newBookPages">Pages</label>
