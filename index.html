@@ -25,6 +25,7 @@
     </div>
 
     <div class="inputModal" id="inputModal">
+    <!--<dialog class="inputModal" id="inputModal">-->
         <div class="modalContent">
         <h4 class="modalTitle">Add a new book</h4>
         <form id="newBook" action="">
@@ -39,11 +40,12 @@
                 </li>
                 <li>
                     <label for="newBookPages">Pages</label>
-                    <input type="tel" name="pages" id="newBookPages">
+                    <input type="tel" pattern="[0-9]{1,9}" name="pages" id="newBookPages" required>
                 </li>
                 <li>
-                    <label for="newBookRead">Read</label>
-                    <input type="checkbox" name="read" id="newBookRead">
+                    <!--<label for="newBookRead">Read</label>
+                    <input type="checkbox" name="read" id="newBookRead">-->
+                    <input type="button" name="read" id="newBookRead" value="Not read" />
                 </li>
             </ul>
             <button class="newBookBtn" type="submit">Add Book</button>
@@ -53,5 +55,6 @@
             <button form="newBook" class="newBookBtn" type="submit">Add Book</button>
         </div>-->
     </div>
+    <!--</dialog>-->
 </body>
 </html>
