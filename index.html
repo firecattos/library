@@ -8,10 +8,11 @@
 </head>
 <body>
     <div class="controlRow">
-        <div class="title">Library</div>
+        <!--<div class="title">Library</div>-->
         <div class="main">
             <div class="createBook">
-                <button id="createBook">Add a book</button>
+                <!--<button id="createBook">Add a book</button>-->
+                <button id="createBook">Add book to<br>the library</button>
             </div><!--
             <div class="listBooks">
                 <button id="listBtn">List books present</button>
@@ -19,8 +20,8 @@
         </div>
     </div>
 
-    <div class="booksRow">
-        <h3>Available books</h3>
+    <!--<div class="booksRow">
+        <h3>Available books</h3>-->
         <div id="bookshelf"></div>
     </div>
 
@@ -31,16 +32,17 @@
         <form id="newBook" action="">
             <ul>
                 <li>
-                    <label for="newBookTitle">Title</label>
-                    <input type="text" name="title" id="newBookTitle" required>
+                    <!--<label for="newBookTitle">Title</label>-->
+                    <input type="text" name="title" id="newBookTitle" placeholder="Title" required>
                 </li>
                 <li>
-                    <label for="newBookAuthor">Author</label>
-                    <input type="text" name="author" id="newBookAuthor" required>
+                    <!--<label for="newBookAuthor">Author</label>-->
+                    <input type="text" name="author" id="newBookAuthor" placeholder="Author" required>
                 </li>
                 <li>
-                    <label for="newBookPages">Pages</label>
-                    <input type="tel" pattern="[0-9]{1,9}" name="pages" id="newBookPages" required>
+                    <!--<label for="newBookPages">Pages</label>-->
+                    <input type="tel" pattern="[0-9]{1,9}" name="pages" id="newBookPages"
+                    placeholder="Pages" required>
                 </li>
                 <li>
                     <!--<label for="newBookRead">Read</label>

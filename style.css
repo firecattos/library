@@ -4,23 +4,48 @@ body{
     grid-template-rows: 3fr 6fr;*/
     margin: 0;
     font-family: sans-serif;
+    background-color: #e6fff2;
 }
 
 .controlRow{
-    background-color: #585656;
-    color: white;
+    background-color: white;
+    /*background-image: url(img/booksCutOut1.jpg);
+    background-position: left bottom;*/
+    box-shadow: 0px 5px 10px 0px #b3b3b3;
+    /*box-shadow: inset 0 0 0 1000px rgba(148, 148, 148, 0.2); /*background overlay*/
+    /*color: white;*/
     display: flex;
-    flex-direction: column;
+    /*flex-direction: column;*/
     align-items: center;
+    justify-content: center;
     height: 5rem;
 }
 
-.booksRow #bookshelf{
+button, #newBook li>input{
+    padding: 0.5em;
+    border: none;
+    border-radius: 10px;
+}
+
+#createBook{
+    /*border-radius: 10px;
+    border: none;
+    padding: 0.5em;
+    /*border-width: 1px;*/
+    background-color: #e6fff2;
+}
+
+#createBook:hover{
+    background-color: #c2d8cc;
+}
+
+/*.booksRow */#bookshelf{
     display: grid;
     /*grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));*/
     grid-template-columns: repeat(auto-fit, 300px);
     grid-auto-rows: 1fr;
     gap: 1.5em;
+    padding: 24px;
 }
 
 .book{
@@ -34,6 +59,11 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 24px;
+}
+
+.book>*{
+    margin: auto;
 }
 
 .inputModal{
@@ -58,6 +88,8 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    border-radius: 15px;
 }
 
 .modalContent .modalTitle{
@@ -73,4 +105,24 @@ body{
     list-style-type: none;
     display: flex;
     flex-direction: column;
+}
+
+#newBook li>input, .newBookBtn{
+    /*border-radius: 10px;
+    border: none;*/
+    padding: 1em;
+}
+
+.newBookBtn{
+    width: 100%;
+}
+
+#newBook ul>*{
+    margin-bottom: 1em;
+}
+
+.buttonsDiv{
+    display: grid;
+    gap: 16px;
+    width: 40%;
 }
