@@ -55,6 +55,7 @@ function createBook(e){
     bookDisplay(myLibrary);
 
     inputModal.style.display="none";
+    document.querySelector("body").style.overflow="";
     newBook.reset();
 }
 
@@ -136,7 +137,8 @@ const inputModal=document.getElementById("inputModal"); //reused
 //When clicked, this button makes an overlay with the modal appear
 const addNewBook=document.getElementById("createBook");
 addNewBook.addEventListener("click", ()=>{
-    inputModal.style.display="block";
+    inputModal.style.display="flex";  //testing flex, was block before
+    document.querySelector("body").style.overflow="hidden"
     //inputModal.showModal();
 });
 /*  <DIALOG> TESTING*/
@@ -171,6 +173,7 @@ function resetRead(){
 window.onclick=(e)=>{
     if(e.target==inputModal){
         inputModal.style.display="none";
+        document.querySelector("body").style.overflow="";
         resetRead();
     }
 }/**///commented for testing with <dialog>
