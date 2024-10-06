@@ -1,62 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Library</title>
     <link rel="stylesheet" href="style.css">
     <script src="library.js" defer></script>
 </head>
+
 <body>
     <div class="controlRow">
-        <!--<div class="title">Library</div>-->
         <div class="main">
             <div class="createBook">
-                <!--<button id="createBook">Add a book</button>-->
                 <button id="createBook">Add book to<br>the library</button>
-            </div><!--
-            <div class="listBooks">
-                <button id="listBtn">List books present</button>
-            </div>-->
+            </div>
         </div>
     </div>
-
-    <!--<div class="booksRow">
-        <h3>Available books</h3>-->
-        <div id="bookshelf"></div>
-    </div>
+    <div id="bookshelf"></div>
 
     <div class="inputModal" id="inputModal">
-    <!--<dialog class="inputModal" id="inputModal">-->
         <div class="modalContent">
-        <h4 class="modalTitle">Add a new book</h4>
-        <form id="newBook" action="">
-            <ul>
-                <li>
-                    <!--<label for="newBookTitle">Title</label>-->
-                    <input type="text" name="title" id="newBookTitle" placeholder="Title" required>
-                </li>
-                <li>
-                    <!--<label for="newBookAuthor">Author</label>-->
-                    <input type="text" name="author" id="newBookAuthor" placeholder="Author" required>
-                </li>
-                <li>
-                    <!--<label for="newBookPages">Pages</label>-->
-                    <input type="tel" pattern="[0-9]{1,9}" name="pages" id="newBookPages"
-                    placeholder="Pages" required>
-                </li>
-                <li>
-                    <!--<label for="newBookRead">Read</label>
-                    <input type="checkbox" name="read" id="newBookRead">-->
-                    <input type="button" name="read" id="newBookRead" value="Not read" />
-                </li>
-            </ul>
-            <button class="newBookBtn" type="submit">Add Book</button>
-        </form>
+            <h4 class="modalTitle">Add a new book</h4>
+            <form id="newBook" action="">
+                <ul>
+                    <li>
+                        <input type="text" name="title" id="newBookTitle" placeholder="Title" required>
+                    </li>
+                    <li>
+                        <input type="text" name="author" id="newBookAuthor" placeholder="Author" required>
+                    </li>
+                    <li>
+                        <input type="tel" pattern="[0-9]{1,9}" name="pages" id="newBookPages" placeholder="Pages"
+                            required>
+                    </li>
+                    <li>
+                        <input type="button" name="read" id="newBookRead" value="Not read" />
+                    </li>
+                </ul>
+                <button class="newBookBtn" type="submit">Add Book</button>
+            </form>
         </div>
-        <!--<div class="btnBook">
-            <button form="newBook" class="newBookBtn" type="submit">Add Book</button>
-        </div>-->
     </div>
-    <!--</dialog>-->
 </body>
+
 </html>
