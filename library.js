@@ -1,21 +1,23 @@
 const myLibrary=[];
 
-function Book(title, author, pages, read){
-    this.title = title;
-    this.author = author;    
-    this.pages = pages;
-    this.read = read ? read:false;
-    this.position = myLibrary.length; //Using length as index before pushing the object into the array
-}
+class Book{
+    constructor(title, author, pages, read){
+        this.title = title;
+        this.author = author;    
+        this.pages = pages;
+        this.read = read ? read:false;
+        this.position = myLibrary.length; //Using length as index before pushing the object into the array
+    }
+    
+    addBook(){
+        myLibrary.push(this);
+    }
 
-Book.prototype.addBook = function(){
-    myLibrary.push(this);
-}
-
-Book.prototype.removeBook = function(index){
-    myLibrary.splice(index, 1);
-    bookDisplay(myLibrary);
-    emptyChecker();
+    removeBook(index){
+        myLibrary.splice(index, 1);
+        bookDisplay(myLibrary);
+        emptyChecker();
+    }
 }
 
 //Creates a book element in the array using the data provided through the input fields
